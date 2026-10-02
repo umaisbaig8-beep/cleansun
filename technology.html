@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="How Clean Sun transparent solar panels work: panel structure, power vs transparency, and a live configurator." />
+<meta name="theme-color" content="#F8F8F6" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<title>Technology — CLEAN SUN</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="navbar">
+  <div class="navbar-inner">
+    <div class="nav-bar-box">
+       <a href="index.html" class="brand">
+  <img src="images/CleanSun logo.jpeg" alt="Clean Sun logo" class="brand-mark" style="width:50px;height:38px;object-fit:contain;" />
+  <span class="brand-text">CLEAN SUN</span>
+</a>
+      <nav class="nav-links">
+        <a href="index.html" data-page="home" class="nav-link">Home</a>
+        <a href="why.html" data-page="why" class="nav-link">Why</a>
+        <a href="technology.html" data-page="technology" class="nav-link active">Technology</a>
+        <a href="contact.html" data-page="contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get a Quote <span class="ico">↗</span></a>
+        <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+  <nav class="mobile-nav">
+    <a href="index.html" data-page="home" class="mobile-link">Home</a>
+        <a href="why.html" data-page="why" class="mobile-link">Why</a>
+        <a href="technology.html" data-page="technology" class="mobile-link active">Technology</a>
+        <a href="contact.html" data-page="contact" class="mobile-link">Contact</a>
+    <a href="contact.html" class="btn btn-primary mobile-cta">Get a Quote ↗</a>
+  </nav>
+</div>
+
+<main id="app">
+
+  <section class="page-hero dark-hero">
+    <div class="hero-img-bg dark"><img src="images/tech-building.jpg" alt="Glass building"></div>
+    <div class="glow" style="width:400px;height:400px;top:33%;right:25%;opacity:.25"></div>
+    <div class="container" style="position:relative;">
+      <div class="eyebrow reveal in">Technology</div>
+      <h1 class="h-display reveal in">Solar technology, built into glass.</h1>
+      <p class="reveal in">Designed to combine photovoltaic generation with architectural transparency.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="max-width:44rem;"><div class="eyebrow">Panel structure</div><h2 class="h-display" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:1.25rem;">A transparent solar panel, layer by layer.</h2></div>
+      <div class="grid g-2" style="margin-top:3.5rem;">
+        <div class="exploded">
+          <div class="glow" style="width:280px;height:280px;top:-80px;right:-80px;opacity:.3"></div>
+          <div style="position:relative;width:100%;max-width:420px;z-index:1;" id="explodedLayers"></div>
+        </div>
+        <div>
+          <div class="eyebrow">Panel structure</div>
+          <h3 class="h-display" style="font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:1rem;">Four layers, one transparent system.</h3>
+          <p class="muted" style="margin-top:1.25rem;line-height:1.6;">A transparent solar panel is composed of multiple architectural and photovoltaic layers, each contributing to safety, performance and aesthetics.</p>
+          <div style="margin-top:1.75rem;" id="layerListButtons"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:linear-gradient(to bottom,var(--bg),#fff);">
+    <div class="container">
+      <div class="reveal grid g-2" style="align-items:flex-end;">
+        <div><div class="eyebrow">Power & transparency</div><h2 class="h-display" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:1.25rem;">The more transparent, the less photovoltaic area.</h2></div>
+        <p class="muted">Increasing transparency can reduce photovoltaic area and therefore reduce nominal generation. Reference values for a 7 × 6 ft panel are shown below.</p>
+      </div>
+      <div class="power-table reveal" style="margin-top:3rem;">
+        <div class="pt-head"><span>Transparency</span><span>Power output</span><span style="text-align:right">7 × 6 ft panel</span></div>
+        
+        <div class="pt-row">
+          <div class="pt-pct">0%</div>
+          <div class="pt-bar"><div class="pt-bar-fill" style="width:100%"></div></div>
+          <div class="pt-w">624 W</div>
+        </div>
+        <div class="pt-row">
+          <div class="pt-pct">20%</div>
+          <div class="pt-bar"><div class="pt-bar-fill" style="width:80%"></div></div>
+          <div class="pt-w">500 W</div>
+        </div>
+        <div class="pt-row">
+          <div class="pt-pct">40%</div>
+          <div class="pt-bar"><div class="pt-bar-fill" style="width:60%"></div></div>
+          <div class="pt-w">374 W</div>
+        </div>
+        <div class="pt-row">
+          <div class="pt-pct">50%</div>
+          <div class="pt-bar"><div class="pt-bar-fill" style="width:50%"></div></div>
+          <div class="pt-w">312 W</div>
+        </div>
+        <div class="pt-row">
+          <div class="pt-pct">60%</div>
+          <div class="pt-bar"><div class="pt-bar-fill" style="width:40%"></div></div>
+          <div class="pt-w">250 W</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section grid-pattern">
+    <div class="container">
+      <div class="reveal" style="max-width:44rem;">
+        <div class="eyebrow">Custom configurator</div>
+        <h2 class="h-display" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:1.25rem;">Build your transparent solar panel.</h2>
+        <p class="muted" style="margin-top:1.25rem;line-height:1.6;">Select dimensions, transparency, glass configuration, frame and quantity to see a live preview and indicative power output.</p>
+      </div>
+      <div class="grid g-2" style="margin-top:3rem;grid-template-columns:1fr;">
+        <div class="glass" style="border-radius:1.5rem;padding:1.5rem;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:1.25rem;">
+            <span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Live panel preview</span>
+            <span style="font-size:.75rem;color:var(--mute)" id="configDims">7 × 6 ft · 12 pcs</span>
+          </div>
+          <div class="config-preview">
+            <div class="glow" style="width:280px;height:280px;top:-80px;right:-80px;opacity:.25"></div>
+            <div class="config-panel" id="configPanel">
+              <div class="cell-grid" id="configCells"></div>
+              <div class="sim-badges">
+                <span class="badge-dark" id="configFrame">Architectural black</span>
+                <span class="badge-orange" id="configWatts">500 W</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid g-4" style="margin-top:1.5rem;">
+            <div class="metric-card"><div class="metric-l">Power / panel</div><div class="metric-v" id="metricWattsPanel">500 W</div></div>
+            <div class="metric-card"><div class="metric-l">Total power</div><div class="metric-v" id="metricTotalW">6.00 kW</div></div>
+            <div class="metric-card"><div class="metric-l">Area / panel</div><div class="metric-v" id="metricArea">42 ft²</div></div>
+            <div class="metric-card"><div class="metric-l">Transparency</div><div class="metric-v text-orange" id="metricT">20%</div></div>
+          </div>
+        </div>
+        <div class="config-form">
+          <div class="field"><label class="field-label">Width (ft) · <span id="wVal">7</span></label><input type="range" min="2" max="12" step="1" value="7" id="cW"></div>
+          <div class="field"><label class="field-label">Height (ft) · <span id="hVal">6</span></label><input type="range" min="2" max="10" step="1" value="6" id="cH"></div>
+          <div class="field"><label class="field-label">Transparency · <span id="tVal">20</span>%</label><input type="range" min="0" max="60" step="5" value="20" id="cT"></div>
+          <div class="grid g-2">
+            <div class="field"><label class="field-label">Glass configuration</label>
+              <select class="cs-input" id="cGlass"><option>Toughened laminate</option><option>Double-glazed unit</option><option>Insulated glass unit</option></select>
+            </div>
+            <div class="field"><label class="field-label">Frame style</label>
+              <select class="cs-input" id="cFrame"><option>Architectural black</option><option>Brushed aluminium</option><option>Mill finish</option></select>
+            </div>
+          </div>
+          <div class="field"><label class="field-label">Quantity</label><input type="number" min="1" value="12" class="cs-input" id="cQty"></div>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Request project quote ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="max-width:44rem;">
+        <div class="eyebrow">Electrical system</div>
+        <h2 class="h-display" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:1.25rem;">From glass to usable building power.</h2>
+        <p class="muted" style="margin-top:1.25rem;line-height:1.6;">The electricity generated by the transparent solar glass is converted and integrated with the building's electrical system.</p>
+      </div>
+      <div class="flow-wrap" style="margin-top:3rem;">
+        <div class="steps-row four">
+          
+          <div class="reveal flow-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">01</span><div class="flow-icon">▦</div></div>
+            <div style="font-family:var(--font-d);font-weight:600;margin-top:1.25rem;">Solar glass</div>
+            <div class="muted" style="font-size:.8rem;margin-top:.3rem;">Generates DC electricity</div>
+          </div>
+          <div class="reveal flow-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">02</span><div class="flow-icon">🔌</div></div>
+            <div style="font-family:var(--font-d);font-weight:600;margin-top:1.25rem;">DC electricity</div>
+            <div class="muted" style="font-size:.8rem;margin-top:.3rem;">Routed through panel</div>
+          </div>
+          <div class="reveal flow-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">03</span><div class="flow-icon">⚡</div></div>
+            <div style="font-family:var(--font-d);font-weight:600;margin-top:1.25rem;">Inverter</div>
+            <div class="muted" style="font-size:.8rem;margin-top:.3rem;">Converts DC to AC</div>
+          </div>
+          <div class="reveal flow-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">04</span><div class="flow-icon">🏢</div></div>
+            <div style="font-family:var(--font-d);font-weight:600;margin-top:1.25rem;">Building</div>
+            <div class="muted" style="font-size:.8rem;margin-top:.3rem;">Powers building loads</div>
+          </div>
+        </div>
+        <div class="muted" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.8rem;">Clean DC power converted into usable AC for the building.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="glow" style="width:400px;height:400px;top:0;right:25%;opacity:.15"></div>
+    <div class="container">
+      <div class="reveal" style="max-width:44rem;"><div class="eyebrow light">Environmental performance</div><h2 class="h-display" style="font-size:clamp(2rem,5vw,3.4rem);margin-top:1.25rem;">Designed for real outdoor conditions.</h2></div>
+      <div class="grid g-4" style="margin-top:3rem;">
+        
+        <div class="reveal env-card">
+          <div class="env-icon">🌡️</div>
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Operating Temperature</div>
+          <div class="h-display" style="font-size:1.2rem;margin-top:.4rem;">-40°C to +85°C</div>
+          <p class="muted" style="margin-top:.6rem;font-size:.85rem;line-height:1.5;">Designed for a wide range of outdoor operating conditions.</p>
+        </div>
+        <div class="reveal env-card">
+          <div class="env-icon">☀️</div>
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">UV Exposure</div>
+          <div class="h-display" style="font-size:1.2rem;margin-top:.4rem;">Outdoor rated</div>
+          <p class="muted" style="margin-top:.6rem;font-size:.85rem;line-height:1.5;">Designed for sustained outdoor solar exposure.</p>
+        </div>
+        <div class="reveal env-card">
+          <div class="env-icon">☁️</div>
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Weather</div>
+          <div class="h-display" style="font-size:1.2rem;margin-top:.4rem;">Dust and rain</div>
+          <p class="muted" style="margin-top:.6rem;font-size:.85rem;line-height:1.5;">Built to perform in typical outdoor environments.</p>
+        </div>
+        <div class="reveal env-card">
+          <div class="env-icon">🛡️</div>
+          <div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Low-Light Performance</div>
+          <div class="h-display" style="font-size:1.2rem;margin-top:.4rem;">Designed behaviour</div>
+          <p class="muted" style="margin-top:.6rem;font-size:.85rem;line-height:1.5;">Generation continues under low-light conditions; specific values vary by project and location.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid g-2">
+      <div>
+        <div class="reveal"><div class="eyebrow">Warranty</div><h2 class="h-display" style="font-size:clamp(2rem,5vw,3.2rem);margin-top:1.25rem;">Long-term protection for every project.</h2></div>
+        <div class="grid g-2" style="margin-top:2.5rem;">
+          <div class="reveal warranty-card"><div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">10 years</div><div class="h-display" style="font-size:1.6rem;margin-top:.6rem;">Material & workmanship</div><p class="muted" style="margin-top:.6rem;font-size:.85rem;line-height:1.5;">Coverage for material and workmanship defects.</p></div>
+          <div class="reveal warranty-card highlight"><div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;opacity:.85">25 years</div><div class="h-display" style="font-size:1.6rem;margin-top:.6rem;">Linear power warranty</div><p style="margin-top:.6rem;font-size:.85rem;line-height:1.5;opacity:.9;">Long-term linear power output protection.</p></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Standards</div>
+        <h3 class="h-display" style="font-size:clamp(1.6rem,3.5vw,2.4rem);margin-top:1rem;">Compliance with international standards.</h3>
+        <p class="muted" style="margin-top:1rem;line-height:1.6;">Designed to align with commonly referenced international certifications and compliance frameworks.</p>
+        <div class="grid g-2" style="margin-top:1.5rem;">
+          <div class="standard-card"><div><div style="font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Standard</div><div class="h-display" style="font-size:1.2rem;margin-top:.2rem;">CE</div></div><span class="text-orange">🏅</span></div><div class="standard-card"><div><div style="font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Standard</div><div class="h-display" style="font-size:1.2rem;margin-top:.2rem;">IEC 61000</div></div><span class="text-orange">🏅</span></div><div class="standard-card"><div><div style="font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Standard</div><div class="h-display" style="font-size:1.2rem;margin-top:.2rem;">IEC 61730</div></div><span class="text-orange">🏅</span></div><div class="standard-card"><div><div style="font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--mute)">Standard</div><div class="h-display" style="font-size:1.2rem;margin-top:.2rem;">ISO 9001</div></div><span class="text-orange">🏅</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section final-cta">
+    <div class="glow" style="width:800px;height:500px;top:-200px;left:50%;transform:translateX(-50%);opacity:.3"></div>
+    <div class="glow" style="width:400px;height:400px;bottom:-200px;right:0;opacity:.2"></div>
+    <div class="container final-cta-grid">
+      <div class="reveal">
+        <div class="eyebrow light">Build the future</div>
+        <h2 class="h-display">Don't just build a building. <span class="text-orange">Build an energy-generating building.</span></h2>
+        <p class="muted" style="margin-top:1.5rem;max-width:42rem;font-size:1.05rem;line-height:1.6;">Explore how Clean Sun transparent solar technology can be integrated into the glass surfaces of your next project.</p>
+      </div>
+      <div class="reveal" style="text-align:right">
+        <a href="contact.html" class="btn btn-primary">Start your project ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-bg"></div>
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark brand-mark-light"><span></span></span>
+          <span class="brand-text">CLEAN SUN</span>
+        </a>
+        <p>Transparent solar technology for modern buildings in Pakistan. Your glass can generate electricity.</p>
+        <div class="pill-light">📍 Pakistan</div>
+      </div>
+      <div class="footer-col">
+        <div class="col-label">Navigation</div>
+        <ul>
+          <li><a href="index.html">Home ↗</a></li>
+          <li><a href="why.html">Why ↗</a></li>
+          <li><a href="technology.html">Technology ↗</a></li>
+          <li><a href="contact.html">Contact ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="col-label">Talk to us</div>
+        <p>Explore a transparent solar configuration for your next building project.</p>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start your project ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span id="year"></span>
+      <span>Transparent solar technology</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
